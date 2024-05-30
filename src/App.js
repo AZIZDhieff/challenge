@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import Intro from "./Intro";
+import Navbar from "./Navbar";
+import Project from "./Project";
 
 function App() {
+  const projects = [
+    {
+      imageURL: "",
+      title: "Project1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+      githubLink: "#",
+    },
+    {
+      imageURL: "",
+      title: "Project2",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+      githubLink: "#",
+    },
+    {
+      imageURL: "",
+      title: "Project3",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+      githubLink: "#",
+    },
+    {
+      imageURL: "",
+      title: "Project4",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex natus quis beatae perspiciatis repellat laudantium aliquam.",
+      githubLink: "#",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Intro />
+      <Project projects={projects} />
+      <Contact />
+      <Footer />
     </div>
   );
 }
